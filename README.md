@@ -1,7 +1,9 @@
 InstaList
----------
+=========
 
-*InstaList* is a little checklist making tool that allows you to quickly create custom, printer-friendly checklists from a web browser. Great for quick to-do lists and grocery lists.
+*InstaList* is a little checklist making tool that allows you to quickly create custom, printer-friendly checklists from a web browser. 
+
+Great for quick to-do lists and grocery lists.
 
 
 
