@@ -1,0 +1,25 @@
+.actions,
+.editMode,
+.topbar,
+footer,
+#add {
+	display:none;
+}
+
+body {
+    padding-top: 25px;
+}
+
+#list-title {
+	min-height: 0;
+}
+
+.checked {
+	display: list-item;
+	list-style-image: url(../images/checked-grey.png);
+	list-style-position: inside;
+}
+
+.checked ~ div.value {
+	text-decoration: none;
+}

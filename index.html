@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>InstaList | Instant printable checklists</title>
+    <link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/screen.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+    <link rel="icon" type="image/gif" href="images/favicon.png">
+</head>
+<body>
+	<div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <span class="brand"><img src="images/logo.png" class="logo" /> InstaList</span>
+
+          <ul class="nav secondary-nav">
+            <li><a href="#about">About</a></li>
+            <!--<li><a href="#help">Help</a></li>-->
+          </ul>
+        </div>
+      </div>
+ 	</div>  <!-- /topbar -->
+    
+    <div class="container">
+    	<noscript>
+	    	<div class="alert-message block-message error">
+			  <strong>JavaScript required!</strong>
+			  If you want to use this site, you will need to enable JavaScript in your browser.
+			</div>
+		</noscript>
+    	
+        <h1 id="list-title">Welcome to InstaList (click to edit)</h1>
+        <input id="list-title-edit" type="text" class="editMode" value=""  /> 
+        
+        <ol id="checklist" class="sortable">
+            <li>
+            	<div class="row">
+	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+	                <div class="box"></div>
+	                <div class="value">Quick, printable checklists from your browser</div>
+	                <input type="text" class="value editMode" value=""  />
+	            </div>
+	        </li>
+            <li>
+            	<div class="row">
+	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+	                <div class="box"></div>
+	                <div class="value">Click any text to edit</div>
+	                <input type="text" class="value editMode" value=""  />
+	            </div>
+	        </li>
+	        <li>
+            	<div class="row">
+	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+	                <div class="box"></div>
+	                <div class="value">Drag and drop to re-order</div>
+	                <input type="text" class="value editMode" value=""  />
+	            </div>
+	        </li>
+	        <li>
+            	<div class="row">
+	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+	                <div class="box checked"></div>
+	                <div class="value">Checkboxes can be checked</div>
+	                <input type="text" class="value editMode" value=""  />
+	            </div>
+	        </li>
+            <li>
+            	<div class="row">
+	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+	                <div class="box"></div>
+	                <div class="value">Nested lists allowed (max 3 deep)</div>
+	                <input type="text" class="value editMode" value=""  />
+	            </div>
+                <ol>
+                	<li>
+                		<div class="row">
+			            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+			                <div class="box"></div>
+			                <div class="value">Drag and drop to change nesting level</div>
+			                <input type="text" class="value editMode" value=""  />
+			            </div>
+		            </li>
+		            <li>
+		                <div class="row">
+			            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+			                <div class="box"></div>
+			                <div class="value">Sub-item 2</div>
+			                <input type="text" class="value editMode" value=""  />
+			            </div>
+		            </li>
+                </ol>
+            </li>
+            <li>
+            	<div class="row">
+	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+	                <div class="box"></div>
+	                <div class="value">Delete all text to remove a row</div>
+	                <input type="text" class="value editMode" value=""  />
+	            </div>
+	        </li>
+            <li>
+            	<div class="row">
+	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+	                <div class="box"></div>
+	                <div class="value">Use the 'Clear' button below to start a new list (or just edit this one)</div>
+	                <input type="text" class="value editMode" value=""  />
+	            </div>
+            </li>
+        </ol>
+        
+        <a id="add" class="btn small"><i class="icon plus"></i> Add item</a>
+
+		<div class="actions">
+			<a id="print" class="primary btn"><i class="icon print"></i> Print</a>
+		</div>
+
+	    <footer>
+	        <p>Created by <a href="http://www.timothyrchurch.com/">Tim Church</a>.</p>
+	        <p>Source code available on <a href="http://github.com/timchurch/instalist">GitHub</a>.</p>
+	    </footer>
+    </div>  <!-- /container -->
+
+</body>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.nestedSortable.js"></script>
+<script type="text/javascript" src="js/instalist.js"></script>
+</html>

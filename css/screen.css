@@ -1,0 +1,163 @@
+body {
+    font-size: 18px;
+    padding-top: 80px;
+}
+
+ol  {
+    list-style: none outside none;
+    margin: 0;
+}
+
+ol.sortable li {
+    margin: 0;
+    padding: 10px 0;
+}
+
+ol ol {
+	padding-left: 45px;
+}
+
+ol ol li:first-child {
+	padding-top: 20px;
+}
+
+ol ol li:last-child {
+	padding-bottom:0;
+}
+
+h1 {
+	padding:5px 6px;
+}
+
+.box {
+	display: inline;
+	float:left;
+    border: 2px solid #444;
+    height: 24px;
+    width: 24px;
+    margin-right:12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#list-title {
+	min-height: 36px;
+}
+
+#list-title-edit {
+	font-weight: bold;
+	color: #404040;
+	margin-bottom: 18px;
+	font-size: 30px;
+	line-height: 36px;
+	
+}
+
+.checked {
+	background-image: url(../images/checked.png);
+}
+
+.checked ~ div.value {
+	text-decoration: line-through;
+}
+
+div.value:hover,
+#list-title:hover {
+	background-color: #FFFF99;
+}
+
+input {
+	border-radius: 0;
+	height: auto;
+	width: 100%;
+}
+
+.span14 .value {
+	width: 765px;
+	margin:0 0 0 42px;
+	padding: 3px 0;
+	line-height: 24px;
+	color: gray;
+	text-align: -webkit-match-parent;
+	font-size: 18px;
+}
+
+.value {
+	display:inline;
+	float:left;
+	width:765px;
+	padding: 5px 4px;
+}
+
+.editMode {
+	display: none;
+}
+
+.value.editMode {
+	background-color: white;
+	padding:4px;
+	display: none;
+}
+
+.sortable-placeholder {
+	background-color: #EEE;
+	border: 1px solid #DDD;
+	line-height: 24px;
+	height: 18px;
+}
+
+.handle-container {
+	display: inline;
+	float:left;
+    width: 24px;
+    margin-right:12px;
+}
+
+.handle {
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+	margin-top: 2px;
+	cursor: move;
+}
+
+#checklist li div.row:hover .handle {
+	filter:alpha(opacity=40);
+	-moz-opacity:0.4;
+	-khtml-opacity: 0.4;
+	opacity: 0.4;
+}
+
+.row {
+	margin-left:0;
+}
+
+.actions {
+	padding-left: 36px;
+}
+
+#add {
+	margin: 15px 0 20px 80px;
+}
+
+footer {
+	text-align: right;
+}
+
+.topbar {
+	position: absolute;
+}
+
+.topbar .nav {
+	font-size: 13px;
+}
+
+img.logo {
+	vertical-align:bottom;
+}
+
+.alert,
+.alert-message {
+	font-size: 13px;
+}
