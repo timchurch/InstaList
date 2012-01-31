@@ -9,18 +9,18 @@
     <link rel="icon" type="image/gif" href="images/favicon.png">
 </head>
 <body>
-	<div class="topbar">
+  <div class="topbar">
       <div class="fill">
         <div class="container">
           <span class="brand"><img src="images/logo.png" class="logo" /> InstaList</span>
 
           <ul class="nav secondary-nav">
-            <li><a href="#about">About</a></li>
+            <li><a id="show-about" class="link">About</a></li>
             <!--<li><a href="#help">Help</a></li>-->
           </ul>
         </div>
       </div>
- 	</div>  <!-- /topbar -->
+  </div>  <!-- /topbar -->
     
     <div class="container">
     	<noscript>
@@ -29,19 +29,38 @@
 			  If you want to use this site, you will need to enable JavaScript in your browser.
 			</div>
 		</noscript>
+		
+		<div id="about" class="alert-message block-message warning hide">
+              <a id="close-about" class="close link" title="Close">&times;</a>
+              <h2>About InstaList</h2>
+           	  <p>InstaList is a little checklist making tool that allows you to quickly create custom, printer-friendly checklists from a web browser.  Great for quick to-do lists and grocery lists.</p>
+           	  <p><span class="label warning">Important</span> Checklists are <em>not saved</em> and no data is ever sent to any server (so closing the browser will delete the current list).</p>
+            	
+            	<div class="credits">
+            		<p>InstaList was developed by <a href="http://www.timothyrchurch.com/">Tim Church</a> with help from the following open-source projects:
+            		<div class="row">
+            			<div class="span4">
+            				<ul>
+			            		<li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></li>
+			            		<li><a href="http://jquery.com/">jQuery</a></li>
+			            		<li><a href="http://jqueryui.com/">jQuery UI</a></li>
+			            	</ul>
+            			</div>
+            			<div class="span5">
+            				<ul>
+			            		<li><a href="https://github.com/mjsarfatti/nestedSortable">nestedSortable jQuery plugin</a></li>
+			            		<li>Icons by <a href="http://glyphicons.com/">Glyphicons</a></li>
+			            	</ul>
+            			</div>
+            		</div>
+            	</div>
+            	<p><span class="label success">Open Source</span> Source code for this project is freely available on <a href="https://github.com/timchurch/InstaList">GitHub</a> under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 license</a>.</p>
+		</div>
     	
-        <h1 id="list-title">Welcome to InstaList (click to edit)</h1>
+        <h1 id="list-title">InstaList:  A Little Checklist Making Tool</h1>
         <input id="list-title-edit" type="text" class="editMode" value=""  /> 
         
         <ol id="checklist" class="sortable">
-            <li>
-            	<div class="row">
-	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
-	                <div class="box"></div>
-	                <div class="value">Quick, printable checklists from your browser</div>
-	                <input type="text" class="value editMode" value=""  />
-	            </div>
-	        </li>
             <li>
             	<div class="row">
 	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
@@ -70,7 +89,7 @@
             	<div class="row">
 	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
 	                <div class="box"></div>
-	                <div class="value">Nested lists allowed (max 3 deep)</div>
+	                <div class="value">Nested lists allowed (max 3 levels)</div>
 	                <input type="text" class="value editMode" value=""  />
 	            </div>
                 <ol>
@@ -79,14 +98,6 @@
 			            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
 			                <div class="box"></div>
 			                <div class="value">Drag and drop to change nesting level</div>
-			                <input type="text" class="value editMode" value=""  />
-			            </div>
-		            </li>
-		            <li>
-		                <div class="row">
-			            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
-			                <div class="box"></div>
-			                <div class="value">Sub-item 2</div>
 			                <input type="text" class="value editMode" value=""  />
 			            </div>
 		            </li>
@@ -104,7 +115,7 @@
             	<div class="row">
 	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
 	                <div class="box"></div>
-	                <div class="value">Use the 'Clear' button below to start a new list (or just edit this one)</div>
+	                <div class="value">Use the 'Clear List' button below to start a new list (or just start editing this one)</div>
 	                <input type="text" class="value editMode" value=""  />
 	            </div>
             </li>
@@ -114,7 +125,23 @@
 
 		<div class="actions">
 			<a id="print" class="primary btn"><i class="icon print"></i> Print</a>
+			<a id="reset" class="btn danger" data-controls-modal="reset-confirm-modal" data-backdrop="true" data-keyboard="true"> Clear List</a>
 		</div>
+		
+		<div id="reset-confirm-modal" class="modal hide fade">
+            <div class="modal-header">
+              <a class="close link" title="Close">&times;</a>
+              <h3>Confirm Reset</h3>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to clear this list and start a new one?</p>
+              <p>All data in the current list will be <em>deleted</em>.</p>
+            </div>
+            <div class="modal-footer">
+              <a id="cancel-reset" class="btn secondary">Cancel</a>
+              <a id="confirm-reset" class="btn primary">Confirm</a>
+            </div>
+        </div>
 
 	    <footer>
 	        <p>Created by <a href="http://www.timothyrchurch.com/">Tim Church</a>.</p>
@@ -126,5 +153,6 @@
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
 <script type="text/javascript" src="js/jquery.ui.nestedSortable.js"></script>
+<script type="text/javascript" src="js/bootstrap-modal.js"></script>
 <script type="text/javascript" src="js/instalist.js"></script>
 </html>

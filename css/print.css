@@ -2,7 +2,10 @@
 .editMode,
 .topbar,
 footer,
-#add {
+#add,
+#about,
+#reset-confirm-modal
+.modal-backdrop {
 	display:none;
 }
 
@@ -23,3 +26,4 @@ body {
 .checked ~ div.value {
 	text-decoration: none;
 }
+

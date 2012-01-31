@@ -8,25 +8,37 @@ ol  {
     margin: 0;
 }
 
-ol.sortable li {
+#checklist li {
     margin: 0;
     padding: 10px 0;
 }
 
-ol ol {
+#checklist ol {
 	padding-left: 45px;
+	margin-top: 10px;
 }
 
-ol ol li:first-child {
-	padding-top: 20px;
+#checklist ol:empty {
+	margin-top:0;
 }
 
-ol ol li:last-child {
-	padding-bottom:0;
+#checklist ol li:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+#checklist li.sortable-placeholder {
+	background-color: #F5F5F5;
+	border: 1px solid #DDD;
+	height: 26px;
+	margin-left: 34px;
+	margin-bottom: 10px;
+	padding-bottom: 0;
 }
 
 h1 {
-	padding:5px 6px;
+	padding:5px 6px 4px 6px;
+	border-bottom: 1px solid #BBB;
 }
 
 .box {
@@ -87,6 +99,7 @@ input {
 	float:left;
 	width:765px;
 	padding: 5px 4px;
+	height: 18px;
 }
 
 .editMode {
@@ -97,13 +110,6 @@ input {
 	background-color: white;
 	padding:4px;
 	display: none;
-}
-
-.sortable-placeholder {
-	background-color: #EEE;
-	border: 1px solid #DDD;
-	line-height: 24px;
-	height: 18px;
 }
 
 .handle-container {
@@ -160,4 +166,30 @@ img.logo {
 .alert,
 .alert-message {
 	font-size: 13px;
+}
+
+.link {
+	cursor: pointer;
+}
+
+#about a {
+	color: #C43C35;
+}
+
+#about p {
+	margin-top: 10px;
+}
+
+.alert-message .credits {
+	border-top: 1px solid #FCEEC1;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+.credits ul {
+	margin-left: 25px;
+}
+
+#about .credits p {
+	margin-top:0px;
 }
