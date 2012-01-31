@@ -5,7 +5,7 @@ InstaList
 
 Great for quick to-do lists and grocery lists.
 
-
+[http://timchurch.github.com/InstaList/](http://timchurch.github.com/InstaList/)
 
 Features
 --------
