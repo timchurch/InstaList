@@ -183,7 +183,7 @@ img.logo {
 .alert-message .credits {
 	border-top: 1px solid #FCEEC1;
 	margin-top: 20px;
-	padding-top: 20px;
+	padding-top: 5px;
 }
 
 .credits ul {
@@ -192,4 +192,18 @@ img.logo {
 
 #about .credits p {
 	margin-top:0px;
+}
+
+#export {
+	margin-right:5px;
+}
+
+#export p.warning {
+	font-size: 13px;
+	padding-top:6px;
+}
+
+#import-error .alert-message {
+	padding-top: 5px;
+	padding-bottom: 5px;
 }

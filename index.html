@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>InstaList | Instant printable checklists</title>
+    <title>InstaList | Simple, Printable Checklists on the Web</title>
     <link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/screen.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
     <link rel="icon" type="image/gif" href="images/favicon.png">
 </head>
 <body>
-  <a href="http://github.com/timchurch/InstaList"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:10001;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
+  <a href="http://github.com/timchurch/InstaList"><img id="github-banner" style="position: absolute; top: 0; right: 0; border: 0; z-index:10001;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
   <div class="topbar">
       <div class="fill">
         <div class="container">
@@ -34,23 +34,25 @@
 		<div id="about" class="alert-message block-message warning hide">
               <a id="close-about" class="close link" title="Close">&times;</a>
               <h2>About InstaList</h2>
-           	  <p>InstaList is a little checklist making tool that allows you to quickly create custom, printer-friendly checklists from a web browser.  Great for quick to-do lists and grocery lists.</p>
-           	  <p><span class="label warning">Important</span> Checklists are <em>not saved</em> and no data is ever sent to any server (so closing the browser will delete the current list).</p>
+           	  <p>InstaList is a little checklist making tool that allows you to quickly create custom, printer-friendly checklists from a web browser.  Great for quick to-do lists, grocery lists, or any other disposable checklist you may need.</p>
+           	  <p><em>No data is sent to any server</em>.  To save a list to your local computer, use the 'Export' button.  To load a saved list, use the 'Import' button.</p>
             	
             	<div class="credits">
+            		<h4>Credits</h4>
             		<p>InstaList was developed by <a href="http://www.timothyrchurch.com/">Tim Church</a> with help from the following open-source projects:
             		<div class="row">
             			<div class="span4">
             				<ul>
-			            		<li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></li>
-			            		<li><a href="http://jquery.com/">jQuery</a></li>
-			            		<li><a href="http://jqueryui.com/">jQuery UI</a></li>
+			            		<li><a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a></li>
+			            		<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+			            		<li><a href="http://jqueryui.com/" target="_blank">jQuery UI</a></li>
 			            	</ul>
             			</div>
             			<div class="span5">
             				<ul>
-			            		<li><a href="https://github.com/mjsarfatti/nestedSortable">nestedSortable jQuery plugin</a></li>
-			            		<li>Icons by <a href="http://glyphicons.com/">Glyphicons</a></li>
+			            		<li><a href="https://github.com/mjsarfatti/nestedSortable" target="_blank">nestedSortable jQuery plugin</a></li>
+			            		<li><a href="https://github.com/dcneiner/Downloadify" target="_blank">Downloadify</a></li>
+			            		<li>Icons by <a href="http://glyphicons.com/" target="_blank">Glyphicons</a></li>
 			            	</ul>
             			</div>
             		</div>
@@ -85,15 +87,15 @@
 	                <div class="value">Checkboxes can be checked</div>
 	                <input type="text" class="value editMode" value=""  />
 	            </div>
-	        </li>
-            <li>
-            	<div class="row">
-	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
-	                <div class="box"></div>
-	                <div class="value">Nested lists allowed (max 3 levels)</div>
-	                <input type="text" class="value editMode" value=""  />
-	            </div>
                 <ol>
+                	<li>
+                		<div class="row">
+		            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+		                <div class="box"></div>
+		                <div class="value">Nested lists allowed (max 3 levels)</div>
+		                <input type="text" class="value editMode" value=""  />
+		            </div>
+                	</li>
                 	<li>
                 		<div class="row">
 			            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
@@ -116,7 +118,23 @@
             	<div class="row">
 	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
 	                <div class="box"></div>
-	                <div class="value">Use the 'Clear List' button below to start a new list (or just start editing this one)</div>
+	                <div class="value">Save your list as a TXT file with the 'Export' button (requires Flash 10+)</div>
+	                <input type="text" class="value editMode" value=""  />
+	            </div>
+            </li>
+            <li>
+            	<div class="row">
+	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+	                <div class="box"></div>
+	                <div class="value">Load a saved list with the 'Import' button</div>
+	                <input type="text" class="value editMode" value=""  />
+	            </div>
+            </li>
+            <li>
+            	<div class="row">
+	            	<div class="handle-container"><img src="images/glyphicons_186_move.png" class="handle" /></div>
+	                <div class="box"></div>
+	                <div class="value">Start a new list with the 'Clear List' button </div>
 	                <input type="text" class="value editMode" value=""  />
 	            </div>
             </li>
@@ -127,7 +145,28 @@
 		<div class="actions">
 			<a id="print" class="primary btn"><i class="icon print"></i> Print</a>
 			<a id="reset" class="btn danger" data-controls-modal="reset-confirm-modal" data-backdrop="true" data-keyboard="true"> Clear List</a>
+			<a id="import" class="btn pull-right" title="Import from TXT file" data-controls-modal="import-modal" data-backdrop="true" data-keyboard="true">Import</a>
+			<div id="export" class="pull-right"><p class="warning"><span class="label warning">Warning</span> Export requires Flash 10+</p></div>
 		</div>
+		
+		<div id="import-modal" class="modal hide fade">
+            <div class="modal-header">
+              <a class="close link" title="Close">&times;</a>
+              <h3>Import Existing Checklist</h3>
+            </div>
+            <div class="modal-body">
+            	<div id="import-error"></div>
+              <p style="height:40px;">
+              	<input type="file" id="import-file-input" name="file" accept="text/plain" class="pull-right"/>
+              </p>
+              
+              <p><span class="label important">Warning</span> Importing an existing list will <em>delete</em> the current list.</p>
+            </div>
+            <div class="modal-footer">
+              <a id="cancel-import" class="btn secondary">Cancel</a>
+              <a id="confirm-import" class="btn primary">Import</a>
+            </div>
+        </div>
 		
 		<div id="reset-confirm-modal" class="modal hide fade">
             <div class="modal-header">
@@ -136,7 +175,7 @@
             </div>
             <div class="modal-body">
               <p>Are you sure you want to clear this list and start a new one?</p>
-              <p>All data in the current list will be <em>deleted</em>.</p>
+              <p><span class="label important">Warning</span> All data in the current list will be <em>deleted</em>.</p>
             </div>
             <div class="modal-footer">
               <a id="cancel-reset" class="btn secondary">Cancel</a>
@@ -155,5 +194,7 @@
 <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
 <script type="text/javascript" src="js/jquery.ui.nestedSortable.js"></script>
 <script type="text/javascript" src="js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript" src="js/downloadify.min.js"></script>
 <script type="text/javascript" src="js/instalist.js"></script>
 </html>
