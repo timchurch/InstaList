@@ -27,6 +27,7 @@ Credits
 * [jQuery](http://jquery.com/)
 * [jQuery UI](http://jqueryui.com/)
 * [nestedSortable jQuery plugin](https://github.com/mjsarfatti/nestedSortable)
+* [Downloadify](https://github.com/dcneiner/Downloadify)
 * Icons from [Glyphicons](http://glyphicons.com/)
 
 License
