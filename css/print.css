@@ -4,8 +4,10 @@
 footer,
 #add,
 #about,
-#reset-confirm-modal
-.modal-backdrop {
+#reset-confirm-modal,
+#import-modal,
+.modal-backdrop,
+#github-banner {
 	display:none;
 }
 
